@@ -2,6 +2,8 @@
 
 Control your MagTag using [Golioth Cloud](https://console.golioth.io) LightDB.
 
+![Sample](src/assets/images/sample.png)
+
 ### Installation
 
 ```
