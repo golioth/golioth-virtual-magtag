@@ -1,0 +1,194 @@
+@font-face {
+  font-family: 'mozart';
+  src: url('./assets/fonts/MozartNbp-93Ey.ttf');
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient(
+    79.13deg,
+    #11502a 0%,
+    #1e403d 48.78%,
+    #202242 100%
+  );
+
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.magtag {
+  position: relative;
+
+  img {
+    width: 100%;
+    filter: drop-shadow(4px 33px 21px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.led {
+  position: absolute;
+  width: 13.4%;
+  aspect-ratio: 4/2.2;
+  opacity: 0;
+  background-color: black;
+  z-index: 2;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  animation-name: flash_border;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  clip-path: polygon(32% 37.5%, 69% 37%, 100% 100%, 0% 100%);
+
+  &.on {
+    opacity: 1;
+  }
+
+  &.off {
+    opacity: 0;
+  }
+
+  &.pos3 {
+    top: 4.1%;
+    left: 13%;
+  }
+
+  &.pos2 {
+    top: 4.1%;
+    left: 33.1%;
+  }
+
+  &.pos1 {
+    top: 4.1%;
+    left: 53.3%;
+  }
+
+  &.pos0 {
+    top: 4.1%;
+    left: 72.8%;
+  }
+}
+
+.button {
+  position: absolute;
+  width: 7.7%;
+  aspect-ratio: 4/2.4;
+  background-color: transparent;
+  z-index: 2;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  animation-name: flash_border;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  &.pos15 {
+    bottom: 3.7%;
+    left: 15.7%;
+  }
+
+  &.pos14 {
+    bottom: 3.6%;
+    left: 35.8%;
+  }
+
+  &.pos12 {
+    bottom: 3.2%;
+    left: 56.3%;
+  }
+
+  &.pos11 {
+    bottom: 3.3%;
+    left: 76.5%;
+  }
+}
+
+@keyframes flash_border {
+  0% {
+    border-color: #ff0000;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #ff0000;
+  }
+}
+
+.text {
+  font-family: 'mozart';
+  position: absolute;
+  caret-color: transparent;
+  width: 84.1%;
+  top: 20.8%;
+  left: 11.4%;
+  line-height: 0.51;
+  font-size: 3rem;
+  background-color: transparent;
+  z-index: 2;
+  height: 58%;
+  word-break: break-all;
+  padding: 6.6px;
+  overflow: hidden;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  margin: 0;
+  border: 3px solid transparent;
+  resize: none;
+
+  animation-name: flash_border;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.inputs {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px 50px;
+}
+
+.messages {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.light {
+  position: absolute;
+  width: 5%;
+  z-index: 2;
+  top: 12%;
+  left: 47.5%;
+  background-color: #373a40;
+}
