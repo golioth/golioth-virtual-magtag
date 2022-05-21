@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "golioth"
+  },
+  "targets": {
+    "golioth": {
+      "hosting": {
+        "virtual-magtag": [
+          "golioth-virtual-magtag"
+        ]
+      }
+    }
+  }
+}
