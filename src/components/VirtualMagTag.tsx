@@ -57,6 +57,12 @@ export const VirtualMagTag: FC = () => {
     const leds = ws.lastJsonMessage?.result?.data?.state?.leds
     const light = ws.lastJsonMessage?.result?.data?.state?.light
 
+    if (light > 50) {
+      toggleColorScheme('light')
+    } else {
+      toggleColorScheme('dark')
+    }
+
     setText(text)
     setLedStates(leds)
     setLight(light)
