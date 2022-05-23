@@ -73,7 +73,9 @@ export const VirtualMagTag: FC = () => {
       <Card>
         <Group position='apart'>
           <Group>
-            <Image src={golioth_logo} height={40} />
+            <div style={{ width: 30 }}>
+              <Image src={golioth_logo} />
+            </div>
             <Title>Virtual MagTag</Title>
           </Group>
           <ActionIcon
