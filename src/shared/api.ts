@@ -43,9 +43,9 @@ export async function updateLeds(
 export async function updateButton(
   url: string,
   apiKey: string,
-  data: Record<string, boolean>,
+  data: boolean,
 ) {
-  const response = await axios.post(`${url}/desired/buttons`, data, {
+  const response = await axios.post(`${url}/desired/buzz`, data, {
     headers: {
       'x-api-key': apiKey,
     },

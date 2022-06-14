@@ -15,7 +15,7 @@ export const Buttons: FC<Props> = ({ isConnected }) => {
     if (!isConnected) return
     setShowHighlight(false)
     try {
-      await updateButton(restApiUrl, apiKey, { [buttonIndex]: true })
+      await updateButton(restApiUrl, apiKey, true)
       showNotification({
         color: 'green',
         message: `Button D${buttonIndex} press sent!`,
