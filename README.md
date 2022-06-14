@@ -34,12 +34,7 @@ Then, click on the `Listen to LightDB` button.
 ```json
 {
   "desired": {
-    "buttons": {
-      "11": 0,
-      "12": 0,
-      "14": 0,
-      "15": 0
-    },
+    "buzz": 0,
     "leds": {
       "0": "#000000",
       "1": "#000000",
